@@ -11,8 +11,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
-    $(LOCAL_PATH)/configs/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
-    $(LOCAL_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_ODM)/etc/mixer_paths.xml
+    $(LOCAL_PATH)/configs/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2640
@@ -75,6 +74,6 @@ $(call inherit-product, device/oneplus/sm8750-common/common.mk)
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/pagani/pagani-vendor.mk)
 
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.adb.secure=0 \
-    persist.sys.usb.config=adb
+    ro.secure=0
