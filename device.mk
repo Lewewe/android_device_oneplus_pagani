@@ -23,7 +23,7 @@ PRODUCT_COPY_FILES += \
 
 # Fingerprint
 $(call soong_config_set,surfaceflinger,udfps_lib,//hardware/oplus:libudfps_extension.oplus)
-#$(call soong_config_set_bool,qtidisplay,oplus_udfps,true)
+$(call soong_config_set_bool,qtidisplay,oplus_udfps,true)
 
 # LiveDisplay
 $(call soong_config_set_bool,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_AF,true)
@@ -75,6 +75,6 @@ $(call inherit-product, device/oneplus/sm8750-common/common.mk)
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/pagani/pagani-vendor.mk)
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.adb.secure=0 \
-    ro.secure=0
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    ro.adb.secure=0 \
+#    ro.secure=0
