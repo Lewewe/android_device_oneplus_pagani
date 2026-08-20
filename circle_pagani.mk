@@ -11,8 +11,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from pagani device
 $(call inherit-product, device/oneplus/pagani/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common CiRCLE stuff.
+$(call inherit-product, vendor/circle/config/common_full_phone.mk)
 
 PRODUCT_NAME := circle_pagani
 PRODUCT_DEVICE := pagani
